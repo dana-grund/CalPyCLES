@@ -1,0 +1,64 @@
+## matplotlib style file
+
+### CREDIT to Nicolai Krieger, 2025
+
+savefig.dpi: 450
+savefig.facecolor: white
+figure.dpi: 450
+
+# text.usetex: True  # on Euler: needs to load texlive/live module.
+# text.latex.preamble: \usepackage{siunitx} \usepackage{amsmath}
+
+# fonts
+font.family: serif
+# font.serif: Times # Palatino # "Computer Modern Roman", # does not work
+axes.labelsize: 6
+axes.titlesize: 6
+# axes.titlelocation: left
+font.size:  6
+legend.fontsize:  6
+xtick.labelsize:  6
+ytick.labelsize:  6
+lines.linewidth: 1
+
+## standard font size: 11pt -> small 10pt, footnotesize 9pt
+## standard font size: 10pt -> small 9pt, footnotesize 8pt
+## entire table of latex font sizes: https://www.sascha-frank.com/latex-font-size.html
+
+# spacing
+figure.constrained_layout.use: False # True
+figure.constrained_layout.h_pad: 0.02778  ## Padding around axes objects. Float representing
+figure.constrained_layout.w_pad: 0.02778  ## inches. Default is 3./72. inches (3 pts)
+figure.constrained_layout.hspace: 0.01     ## Space between subplot groups. Float representing
+figure.constrained_layout.wspace: 0.01     ## a fraction of the subplot widths being separated.
+
+# grid
+axes.grid: True
+grid.linewidth: 0.5
+grid.color: lightgrey
+
+# axes
+axes.linewidth: 0.5
+axes.spines.top: False
+axes.spines.right: False
+axes.formatter.limits: -3,6 # exponent form which on there is an axis multiplier
+# for custom float formats, see:
+# https://stackoverflow.com/a/49351416
+
+# ticks
+ytick.major.pad: 2.5
+xtick.major.pad: 2.5
+ytick.minor.pad: 2.5
+xtick.minor.pad: 2.5
+
+# plotting
+pcolor.shading: nearest
+
+# legend
+legend.frameon: True
+legend.framealpha: 1.
+legend.facecolor: white
+legend.edgecolor: white
+
+# scatters and patches
+patch.linewidth: 0.75 # edge width in points.

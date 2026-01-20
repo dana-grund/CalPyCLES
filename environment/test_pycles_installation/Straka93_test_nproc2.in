@@ -1,0 +1,202 @@
+{
+    "conditional_stats": {
+        "classes": [
+            "Spectra"
+        ],
+        "frequency": 10,
+        "stats_dir": "cond_stats"
+    },
+    "damping": {
+        "scheme": "None"
+    },
+    "diffusion": {
+        "qt_entropy_source": false
+    },
+    "fields_io": {
+        "diagnostic_fields": [
+            "temperature",
+            "buoyancy_frequency"
+        ],
+        "fields_dir": "fields",
+        "frequency": 10
+    },
+    "grid": {
+        "dims": 3,
+        "dx": 100.0,
+        "dy": 100.0,
+        "dz": 100.0,
+        "gw": 3,
+        "nx": 512,
+        "ny": 7,
+        "nz": 64
+    },
+    "meta": {
+        "casename": "StableBubble",
+        "simname": "Straka93_test_nproc2",
+        "uuid": "6714f360-7b0d-4fb8-b174-e0bedbe78355"
+    },
+    "microphysics": {
+        "phase_partitioning": "liquid_only",
+        "scheme": "None_Dry"
+    },
+    "momentum_transport": {
+        "order": 5
+    },
+    "mpi": {
+        "nprocx": 2,
+        "nprocy": 1,
+        "nprocz": 1
+    },
+    "output": {
+        "output_root": "./"
+    },
+    "postprocessing": {
+        "collapse_y": true,
+        "half_x": true,
+        "only_T_anomaly": true,
+        "skip_vels": false,
+        "merge_timesteps": true,
+        "collapse_folders": true
+    },
+    "restart": {
+        "frequency": 10.0,
+        "init_from": false,
+        "input_path": "./",
+        "output": true
+    },
+    "scalar_transport": {
+        "order": 5
+    },
+    "sgs": {
+        "UniformViscosity": {
+            "diffusivity": 75.0,
+            "viscosity": 75.0
+        },
+        "scheme": "UniformViscosity"
+    },
+    "stats_io": {
+        "auxiliary": [
+            "TurbMeas"
+        ],
+        "frequency": 10,
+        "meas_locs": [
+            [
+                5000.0,
+                0.0,
+                50.0
+            ],
+            [
+                5000.0,
+                0.0,
+                100.0
+            ],
+            [
+                5000.0,
+                0.0,
+                250.0
+            ],
+            [
+                5000.0,
+                0.0,
+                500.0
+            ],
+            [
+                5000.0,
+                0.0,
+                2000.0
+            ],
+            [
+                10000.0,
+                0.0,
+                50.0
+            ],
+            [
+                10000.0,
+                0.0,
+                100.0
+            ],
+            [
+                10000.0,
+                0.0,
+                250.0
+            ],
+            [
+                10000.0,
+                0.0,
+                500.0
+            ],
+            [
+                10000.0,
+                0.0,
+                2000.0
+            ],
+            [
+                15000.0,
+                0.0,
+                50.0
+            ],
+            [
+                15000.0,
+                0.0,
+                100.0
+            ],
+            [
+                15000.0,
+                0.0,
+                250.0
+            ],
+            [
+                15000.0,
+                0.0,
+                500.0
+            ],
+            [
+                15000.0,
+                0.0,
+                2000.0
+            ],
+            [
+                20000.0,
+                0.0,
+                50.0
+            ],
+            [
+                20000.0,
+                0.0,
+                100.0
+            ],
+            [
+                20000.0,
+                0.0,
+                250.0
+            ],
+            [
+                20000.0,
+                0.0,
+                500.0
+            ],
+            [
+                20000.0,
+                0.0,
+                2000.0
+            ]
+        ],
+        "stats_dir": "stats"
+    },
+    "straka": {
+        "amplitude": 15.0,
+        "x_r": 4.0,
+        "z_c": 3.0,
+        "z_r": 2.0
+    },
+    "thermodynamics": {
+        "latentheat": "constant"
+    },
+    "time_stepping": {
+        "cfl_limit": 0.7,
+        "dt_initial": 10.0,
+        "dt_max": 10.0,
+        "t_max": 20.0,
+        "ts_type": 3
+    }
+}

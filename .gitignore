@@ -1,0 +1,19 @@
+# Byte-compiled
+__pycache__/
+
+# Distribution / packaging
+*.egg-info/
+
+# Environment
+environment/.archive
+environment/.venv
+environment/environment.txt
+
+# PyCLES compilation
+environment/test_pycles_installation/*
+!environment/test_pycles_installation/Straka93_test_nproc2.in
+*.err
+*.out
+
+# Jupyter noteboos
+*.ipynb_checkpoints/

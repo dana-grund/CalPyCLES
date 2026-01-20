@@ -1,0 +1,52 @@
+{% set name = "calpycles" %}
+{% set package = "calpycles" %}
+{% set git_url = "git+ssh://git@github.com/dana-grund/CalPyCLES.git" %}
+{% set build = "0" %}
+
+{% set pyproject = load_file_data("../pyproject.toml", from_recipe_dir=True) %}
+{% set requirements = load_file_data("../requirements/requirements.yml", from_recipe_dir=True) %}
+{% set version = pyproject["project"]["version"] %}
+{% set description = pyproject["project"]["description"] %}
+
+package:
+  name: {{ name | lower }}
+  version: {{ version }}
+
+source:
+  git_rev: v{{ version }}
+  git_url: ../
+
+build:
+  noarch: python
+  number: {{ build }}
+  script: python -m pip install --no-deps --ignore-installed .
+
+requirements:
+  host:
+    {% for dep in pyproject["build-system"]["requires"] %}
+    - {{ dep.lower() }}
+    {% endfor %}
+    # {% for dep in requirements["dependencies"] %}
+    # - {{ dep.lower() }}
+    # {% endfor %}
+    # Copy runtime dependencies from requirements/requirements.yml here
+  run:
+    # {% for dep in requirements["dependencies"] %}
+    # - {{ dep.lower() }}
+    # {% endfor %}
+    # Copy runtime dependencies from requirements/requirements.yml here
+
+test:
+  imports:
+    - {{ package }}
+  requires:
+    - pytest==7.1
+  source_files:
+    - tests/
+  commands:
+    - pytest tests/
+
+about:
+  license: MIT
+  summary: {{ description }}
+  description: {{ description }}
