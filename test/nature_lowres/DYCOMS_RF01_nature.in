@@ -1,0 +1,129 @@
+{
+    "conditional_stats": {
+        "classes": [
+            "Spectra"
+        ],
+        "frequency": 3600,
+        "stats_dir": "cond_stats"
+    },
+    "damping": {
+        "Rayleigh": {
+            "gamma_r": 0.02,
+            "z_d": 500.0
+        },
+        "scheme": "Rayleigh"
+    },
+    "diffusion": {
+        "qt_entropy_source": false
+    },
+    "fields_io": {
+        "diagnostic_fields": [
+            "ql",
+            "temperature",
+            "buoyancy_frequency"
+        ],
+        "fields_dir": "fields",
+        "frequency": 3600
+    },
+    "forcing": {
+        "divergence": 3.75e-06,
+        "ug": 7.35,
+        "vg": 0
+    },
+    "grid": {
+        "dims": 3,
+        "dx": 50.0,
+        "dy": 50.0,
+        "dz": 15.0,
+        "gw": 3,
+        "nx": 67,
+        "ny": 67,
+        "nz": 100
+    },
+    "initial": {
+        "qt_1": 0.0015,
+        "qtg": 0.009,
+        "tg": 290.4619859957094,
+        "thetal_1": 297.5,
+        "thetal_g": 289.0,
+        "zi": 840.0
+    },
+    "meta": {
+        "casename": "DYCOMS_RF01",
+        "simname": "DYCOMS_RF01_nature",
+        "uuid": "19fa2d01-24be-47f1-9398-c89319d0563a"
+    },
+    "microphysics": {
+        "ccn": 100000000.0,
+        "cloud_sedimentation": false,
+        "phase_partitioning": "liquid_only",
+        "scheme": "None_SA"
+    },
+    "momentum_transport": {
+        "order": 5
+    },
+    "mpi": {
+        "nprocx": 16,
+        "nprocy": 1,
+        "nprocz": 1
+    },
+    "output": {
+        "output_root": "./"
+    },
+    "postprocessing": {
+        "collapse_folders": true,
+        "merge_timesteps": true
+    },
+    "radiation": {
+        "RRTM": {
+            "frequency": 60.0
+        },
+        "dycoms_alpha_z": 1,
+        "dycoms_f0": 70,
+        "dycoms_f1": 22,
+        "dycoms_kap": 85,
+        "use_RRTM": true
+    },
+    "restart": {
+        "frequency": 14400.0,
+        "init_from": false,
+        "input_path": "./",
+        "output": true
+    },
+    "scalar_transport": {
+        "order": 5
+    },
+    "sgs": {
+        "Smagorinsky": {
+            "cs": 0.0,
+            "prt": 0.3333333333333333
+        },
+        "scheme": "Smagorinsky"
+    },
+    "stats_io": {
+        "auxiliary": [
+            "DYCOMS",
+            "Flux"
+        ],
+        "frequency": 60,
+        "stats_dir": "stats"
+    },
+    "surface": {
+        "cm": 0.0011,
+        "density_surface": 1.22,
+        "fq": 117.71635585643862,
+        "ft": 20.403894115132744,
+        "p_surface": 101780.0,
+        "sst": 292.5
+    },
+    "thermodynamics": {
+        "latentheat": "constant"
+    },
+    "time_stepping": {
+        "cfl_limit": 0.7,
+        "dt_initial": 1.0,
+        "dt_max": 4.0,
+        "t_max": 14400,
+        "ts_type": 3
+    }
+}
